@@ -253,6 +253,11 @@ section.active { display: flex; }
 .btn:hover { background: var(--ink); color: var(--bg); }
 .btn.filled { background: var(--ink); color: var(--bg); }
 .btn.filled:hover { background: var(--accent); border-color: var(--accent); }
+.cv-btn {
+  border-color: var(--accent2);
+  color: var(--accent2);
+}
+.cv-btn:hover { background: var(--accent2); color: var(--bg); border-color: var(--accent2); }
 
 .hero-right {
   flex: 0 0 420px;
@@ -795,6 +800,17 @@ body.pixel-mode .btn.filled:hover {
   background: #ffcc00;
   border-color: #ffcc00;
   box-shadow: none;
+}
+body.pixel-mode .cv-btn {
+  border: 3px solid #ffcc00;
+  color: #ffcc00;
+  box-shadow: 4px 4px 0 #664400;
+}
+body.pixel-mode .cv-btn:hover {
+  background: #ffcc00;
+  color: #080c10;
+  box-shadow: none;
+  transform: translate(4px, 4px);
 }
 
 /* Pixel eye: hide regular, show canvas */
@@ -1342,7 +1358,8 @@ body.pixel-mode .lens-ring {
     <h1 class="hero-name">Nitin<br><em>Negi.</em></h1>
     <p class="hero-sub">PhD student studying human vision and accommodation.</p>
     <div class="hero-cta">
-      <a href="#" class="btn filled" onclick="showSection('projects');return false;">View Research</a>
+      <a href="cv.pdf" target="_blank" class="btn filled cv-btn">View CV ↗</a>
+      <a href="#" class="btn" onclick="showSection('projects');return false;">View Research</a>
       <a href="#" class="btn" onclick="showSection('contact');return false;">Get in Touch</a>
     </div>
   </div>
